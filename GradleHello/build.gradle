@@ -10,6 +10,7 @@ plugins {
     // Apply the java-library plugin to add support for Java Library
     id 'java-library'
 }
+apply plugin:'maven-publish'
 
 dependencies {
     // This dependency is exported to consumers, that is to say found on their compile classpath.
@@ -27,4 +28,29 @@ repositories {
     // Use jcenter for resolving your dependencies.
     // You can declare any Maven/Ivy/file repository here.
     jcenter()
+}
+
+
+def createDir={
+    path->
+        File dir=new File(path)
+        if(!dir.exists()){
+            dir.mkdirs()
+        }
+
+}
+task makeJavaDir(){
+    def paths=['src/main/java','src/main/resources','src/test/java','src/test/resources']
+    doFirst{
+        paths.forEach(createDir);
+    }
+}
+
+
+publishing{
+    publications{
+        myPublish(MavenPublication){
+            from components.java
+        }
+    }
 }

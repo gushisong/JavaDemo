@@ -3,6 +3,7 @@
  */
 public class Library {
     public boolean someLibraryMethod() {
+    	System.out.println("Test");
         return true;
     }
 }
