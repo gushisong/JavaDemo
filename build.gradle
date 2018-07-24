@@ -22,9 +22,24 @@ dependencies {
 
     // This dependency is used internally, and not exposed to consumers on their own compile classpath.
     implementation 'com.google.guava:guava:23.0'
-
+	implementation 'org.json:json:20180130'
     // Use JUnit test framework
     testImplementation 'junit:junit:4.12'
-    compile 'net.sf.json-lib:json-lib:2.4'
+    
+    implementation 'com.google.code.gson:gson:2.8.5'
+    
+    //compile 'net.sf.json-lib:json-lib:2.4'
+    //compile 'com.google.code.gson:gson-parent:2.8.5'
+    
+    compile 'org.testng:testng:6.14.3'
+    
+    compile group: 'org.apache.poi', name: 'poi', version: '3.17'
+    compile group: 'org.apache.poi', name: 'poi-ooxml', version: '3.17'
+    compile group: 'log4j', name: 'log4j', version: '1.2.17'
+    //compile group: 'net.sf.json-lib', name: 'json', version: '2.4'
+    compile 'org.json:json:20180130'
+   // compile group: 'com.google.code.gson', name: 'gson-parent', version: '2.8.5'
+
+    //compile 'org.kopitubruk.util:JSONUtil:1.10.4'
 }
 

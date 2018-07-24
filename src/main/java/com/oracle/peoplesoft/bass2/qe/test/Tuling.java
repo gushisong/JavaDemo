@@ -6,6 +6,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 import javax.net.ssl.HttpsURLConnection;
+import javax.print.attribute.standard.RequestingUserName;
 
 public class Tuling {
 	
@@ -34,11 +35,12 @@ public class Tuling {
             conn.setRequestProperty("Authorization", "token");
             conn.setRequestProperty("tag", "htc_new");
             
-            JSONObject obj=new JSONObject();
+
 			
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
+		return "";
 		
 	}
 	public Tuling() {
@@ -48,6 +50,8 @@ public class Tuling {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
+		
 	}
 
+	
 }
