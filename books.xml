@@ -1,0 +1,14 @@
+<? xml version="1.0" encoding="UTF-8"?>
+
+<books>
+	<book bookno="001">
+		<title>JAVA编程语言</title>
+		<author>张三</author>
+		<price>80</price>
+	</book>
+		<book bookno="002">
+		<title>android开发</title>
+		<author>李四</author>
+		<price>100</price>
+	</book>
+</books>
